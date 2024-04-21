@@ -1,4 +1,6 @@
 ---
+import Navbar from '../components/Navbar.jsx';
+
 interface Props {
 	title: string;
 }
@@ -17,29 +19,19 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navbar />
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background: rgb(10, 14, 18);
 	}
-	main {
+	.main {
 		width: 97%;
 		padding: 10px;
+		margin-top: 50px;
 		color: white;
 		font-size: 20px;
 		display: flex;
@@ -51,8 +43,88 @@ const { title } = Astro.props;
 		font-size: 40px;
 		font-weight: bold;
 	}
+	h1, h2, h3, h4, p {
+		color: rgb(255, 255, 255);
+	}
 	p {
 		font-size: 20px;
 		font-weight: normal;
+	}
+	.navbar {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.navbar-container {
+		width: 97%;
+		position: absolute;
+		top: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border-radius: 15px;
+		padding: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+		backdrop-filter: blur(3px);
+		box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, .5);
+	}
+	.navbar-left {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.navbar-right {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 10px;
+	}
+	.navbar-btn {
+		background: transparent;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50px;
+		padding: 7px;
+		box-shadow: none;
+		gap: 7px;
+		text-decoration: none;
+		transition: all .15s;
+	}
+	.navbar-btn.white {
+		background: rgb(255, 255, 255);
+		box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, .5);
+	}
+	.navbar-btn h2 {
+		color: rgb(255, 255, 255);
+		user-select: none;
+		font-size: 15px;
+		padding: 0px;
+		margin: 0px;
+	}
+	.navbar-btn.white h2 {
+		color: rgb(0, 0, 0);
+	}
+	.navbar-btn:hover {
+		background: rgb(50, 54, 58);
+	}
+	.navbar-btn:hover:active {
+		background: rgb(20, 24, 28);
+	}
+	.navbar-btn.white:hover {
+		background: rgb(150, 154, 158);
+	}
+	.navbar-btn.white:hover:active {
+		background: rgb(100, 104, 108);
 	}
 </style>
