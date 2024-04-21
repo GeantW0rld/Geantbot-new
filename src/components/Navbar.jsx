@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="navbar">
             <div className="navbar-container">
                 <div className="navbar-left">
-                    <img src="/icons/logo.png" width={65} height={65} />
+                    <img src="/icons/logo.png" width={120} height={65} />
                 </div>
                 <div className="navbar-right">
                     <Navbar_Button title={"Home"} href={"/"} />
