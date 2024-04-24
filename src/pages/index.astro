@@ -13,8 +13,11 @@ let server_count_enabled = false;
 		<img src="/icons/mobile_icon.png" width={200} height={200} />
 		<h1>A multifunction bot for your discord server</h1>
 		<h3>with EPIC customizations!</h3>
-		<h4>using discord.js v14+, keep in mind we might restart our Discord Bot to keep our features up-to-date.</h4>
-		<Navbar_Button client:load title={"Invite Discord Bot"} href={"/invite"} white={true} />
+		<h4>using discord.js v14+</h4>
+		<div class="note_box info">
+			<p>Keep in mind, we might restart SkyBeBot to keep our features up-to-date.</p>
+		</div>
+		<Navbar_Button client:load title={"Invite Discord Bot"} href={"/invite"} white={true} id={""} on_click={null} />
 		{
 			server_count_enabled ?
 			(
