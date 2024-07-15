@@ -16,7 +16,7 @@ export default function Navbar() {
                         <Navbar_Button client:load title={"Terms Of Service"} href={"/tos"} />
                         <Navbar_Button client:load title={"Commands"} href={"/commands"} />
                         <Navbar_Button client:load title={"Documentation"} href={"/docs"} />
-                        <Navbar_Button client:load title={"Sign In"} white={true} href={"/account/auth"} />
+                        <Navbar_Button client:load title={"Sign In"} white={true} href={"https://dashboard.bot.skybeworld.com"} />
                     </div>
                     <Navbar_Button
                     client:load
