@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar_Button from "../components/buttons/Navbar";
 import abbreviate_number from "../utils/abbreviate_number";
 
-let title = "SkyBeWorld";
+let title = "Home - SkyBeWorld";
 let server_count = 1024;
 let server_count_enabled = false;
 ---
@@ -17,7 +17,7 @@ let server_count_enabled = false;
 		<div class="note_box info">
 			<p>Keep in mind, we might restart SkyBeBot to keep our features up-to-date.</p>
 		</div>
-		<Navbar_Button client:load title={"Invite Discord Bot"} href={"/invite"} white={true} id={""} on_click={null} />
+		<Navbar_Button client:load title={"Invite Discord Bot"} href={"https://dashboard.skybeworld.com/invite"} white={true} id={""} on_click={null} />
 		{
 			server_count_enabled ?
 			(
